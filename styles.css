@@ -169,6 +169,10 @@ h6{
 }
 
 .about-para{
+  color: #b8c5ea;
+}
+
+.about-para{
   line-height: 2rem;
   margin-top: 1rem;
 }
@@ -220,7 +224,6 @@ h6{
   -webkit-box-align: center;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 100vh;
   padding: 4rem 15%;
 
 }
@@ -259,9 +262,13 @@ h6{
   margin: 30px 0;
 }
 
+.container .card .img-box .design{
+  margin-top: 0;
+}
 
 .container .card .img-box img{
   width: 1000px;
+  margin-top: 80px;
 }
 
 
@@ -281,13 +288,15 @@ h6{
 }
 
 .container .card:hover .img-box{
-  width: 150px;
-  height: 150px;
-  left: -75px;
+  width: 0;
+  height: 0px;
+  left: 0px;
   top: calc(50% - 75px);
   transition: 0.5s ease-in-out;
   background:hsl(51, 77%, 49%);
+  text-decoration: none;
 }
+
 
 .container .card .img-box::before{
   content: attr(data-text);
@@ -303,9 +312,13 @@ h6{
 }
 
 .container .card .img-box img{
-  max-width: 100px;
+  max-width: 250px;
   transition: 0.5s ease-in-out;
 
+}
+
+.container .card .img-box h1{
+  color: #707276;
 }
 
 .container .card:hover .img-box img{
@@ -313,10 +326,18 @@ h6{
 }
 
 
+
+.container .card .content img{
+  justify-content: center;
+  display: inline-block;
+  margin-top:10px ;
+  padding: 5px 10px;
+  width: 300px;
+  
+}
+
 .container .card .content{
-  position: absolute;
-  right: 0;
-  width: calc(100% - 75px);
+  
   height: 100%;
   padding: 20px;
   display: flex;
@@ -376,6 +397,9 @@ h6{
   @media (max-width:768px)
   {
 
+    #portfolioss{
+      margin-top: 40px;
+    }
     
     .container .card{
      max-width: 300px;
@@ -387,6 +411,7 @@ h6{
 
   .container .card .img-box{
     position: relative;
+    width: 200px;
   }
   .container .card .img-box,
   .container .card:hover .img-box{
@@ -452,7 +477,7 @@ h6{
 }
 
 .extra-sub{
-  color: #b8c5ea;
+  color: hsl(51, 100%, 78%);
 }
 
 /*--------------------------------------------------- Contact ----------------------------------------------*/
@@ -502,6 +527,13 @@ h6{
 .emailbox:hover{
   background-color:  hsla(51, 81%, 84%, 0.673);
 }
+
+@media (max-width:768px)
+  {
+    #title, #contact{
+      min-height: 65vh;
+    }
+  }
 
 /*------------------------------------------------- footer -----------------------------------------------------*/
 
@@ -573,6 +605,7 @@ transform: translateY(-30px);
 
 .copywrite{
   position:absolute;
+  margin-bottom: 30px;
   padding-top:8rem ;
 z-index: -1;
 }
